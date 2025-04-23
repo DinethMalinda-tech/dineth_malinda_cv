@@ -27,6 +27,7 @@
         </button>
 
         <!-- Navigation -->
+        
         <nav class="main-nav">
             <ul class="navbar">
                 <li><a href="#home">Home</a></li>
@@ -67,12 +68,13 @@
 
 
     <!--profile-->
+    <a id="home"></a>
 
     <div class="profile-container">
         <div class="profile">
-            <a id="home"></a>
+            
             <img src="profile-1.jpg" alt="Profile Image">
-            </a>
+            
         </div>
         <div class="profile-info">
             <h1 class="name-intro">Hey I'm <span class="name">Dineth Malinda </span><br>I am a <span class="name">Web
@@ -82,8 +84,10 @@
                 learning new tools to improve.
                 I’m focused on creating real solutions through simple, user-friendly web experiences."</p>
             <br>
+            <a href="#contact">
             <button class="btn">Hire me</button>
             <button class="btn">Contacts</button>
+            </a>
         </div>
     </div>
 
@@ -91,7 +95,7 @@
     <a id="skills"></a>
     <div class="skills-container">
         <div class="skill">
-            <img src="html (3).jpeg" alt="HTML">
+            <img src="html (3).png" alt="HTML">
         </div>
         <div class="skill">
             <img src="css (2).jpeg" alt="CSS">
@@ -114,7 +118,7 @@
     </div>
 
     <!--Education-->
-    
+    <a id="education"></a>
     <div class="certificate">
         <h1>My Qualifications</h1>
         <ul>
@@ -127,6 +131,51 @@
 
         </ul>
     </div>
+
+    <br>
+
+
+
+    <!--contact me-->
+    <a id="contact"></a>
+    <div class="card">
+        <div class="sidebar left-sidebar" id="contactSidebar">
+          <button class="close-btn" onclick="toggleSidebar('contactSidebar')">Close</button>
+          <h2>📞 Contact Me</h2>
+          <a href="https://facebook.com/dineth" target="_blank">Connect to My Facebook</a>
+        </div>
+    
+        <div class="sidebar right-sidebar" id="hireSidebar">
+          <button class="close-btn" onclick="toggleSidebar('hireSidebar')">Close</button>
+          <h2>Hire Me</h2>
+          <form onsubmit="handleSubmit(event)">
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Your Name" required>
+            <input type="text" placeholder="Job Type (e.g. Website, Logo)" required>
+            <textarea rows="3" placeholder="Project Description" required></textarea>
+            <input type="number" placeholder="Price You Offer (LKR)" required>
+            <button type="submit" class="send-btn">Send</button>
+          </form>
+        </div>
+    
+        <div class="content">
+          <button class="btn-contact" onclick="toggleSidebar('contactSidebar')">Contact Me</button>
+          <br>
+          <button class="btn-contact" onclick="toggleSidebar('hireSidebar')">Hire Me</button>
+        </div>
+      </div>
+      
+  <script>
+    function toggleSidebar(id) {
+      const sidebar = document.getElementById(id);
+      sidebar.classList.toggle("open");
+    }
+
+    function handleSubmit(event) {
+      event.preventDefault();
+      alert("Thanks! I'll review your request and get back to you shortly 😊");
+    }
+  </script>
 
 
 
